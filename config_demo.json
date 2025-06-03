@@ -40,14 +40,5 @@
   "logging_config": {
     "log_file_name": "demo_processing_log.txt",
     "log_level": "INFO"
-  },
-  "accuracy_metric_config": {
-    "rainfall_categories_mm_month": {
-        "no_rain": 1.0,
-        "light_rain": 25.0,
-        "moderate_rain": 75.0,
-        "heavy_rain": 150.0
-    },
-    "binary_thresholds_mm_month": [10, 50, 100]
   }
 } 

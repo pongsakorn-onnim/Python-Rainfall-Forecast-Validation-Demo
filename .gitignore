@@ -18,6 +18,9 @@ env/
 .DS_Store
 Thumbs.db
 
+# GIS auxiliary files
+*.aux.xml
+
 # If you decide not to version control output or specific large data files:
 # output/
 # data/large_files_go_here/ 

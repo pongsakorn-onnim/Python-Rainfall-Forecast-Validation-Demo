@@ -346,31 +346,11 @@ class DemoValidationProcessor:
                                 "reason": reason.strip()
                             })
         
-        if not all_results_data:
-            self.logger.warning("No results were generated. Check input data and configuration.")
-            return
-
-        # Save detailed per-area results
+        # After all loops, save results and skipped log
         self._save_results(all_results_data)
         self._save_skipped_log(skipped_combinations)
-
-        # Calculate and save aggregated metrics
-        aggregated_df = self._calculate_and_save_aggregated_metrics(all_results_data)
-
-        # Create Excel validation matrix
-        if aggregated_df is not None and not aggregated_df.empty:
-            self._create_validation_matrix_excel(aggregated_df)
-        else:
-            self.logger.warning("Aggregated data is empty. Skipping Excel matrix creation.")
-
-        # --- Generate Plots ---
-        if aggregated_df is not None and not aggregated_df.empty:
-            self._plot_metrics_vs_lead_time(aggregated_df)
-        
-        self._plot_validation_areas()
-        # --- End of Plotting ---
-
-        self.logger.info(f"Validation process finished.")
+        self._calculate_and_save_aggregated_metrics(all_results_data)
+        self.logger.info("Validation process finished.")
 
     def _process_raster_to_zonal_means(self, raster_file_path: Path, zone_gdf: gpd.GeoDataFrame, zone_id_col: str) -> dict[int, float] | None:
         """
@@ -636,11 +616,8 @@ class DemoValidationProcessor:
             if not aggregated_df.empty:
                 self._create_validation_matrix_excel(aggregated_df)
 
-            return aggregated_df
-
         except Exception as e:
             self.logger.error(f"Failed to calculate or save aggregated metrics: {e}", exc_info=True)
-            return None # Ensure a DataFrame or None is returned
 
     def _save_results(self, results_data: list):
         """Saves the aggregated results to a CSV file."""
@@ -670,77 +647,6 @@ class DemoValidationProcessor:
             self.logger.info(f"Skipped combinations log saved to: {self.skipped_log_file}")
         except Exception as e:
             self.logger.error(f"Failed to save skipped combinations log: {e}", exc_info=True)
-
-    # --- New Plotting Methods ---
-    def _plot_metrics_vs_lead_time(self, aggregated_df):
-        """Generates and saves line plots for each metric vs. lead time."""
-        if aggregated_df is None or aggregated_df.empty:
-            self.logger.warning("Aggregated data is empty. Skipping metrics plots.")
-            return
-
-        try:
-            import matplotlib.pyplot as plt
-            
-            metrics_to_plot = {
-                'rmse': 'RMSE',
-                'mean_error_bias': 'Bias (Mean Error)',
-                'pearson_r': 'Pearson Correlation (R)'
-            }
-            models = aggregated_df['model_name'].unique()
-
-            for metric_col, pretty_name in metrics_to_plot.items():
-                plt.figure(figsize=(10, 6))
-                for model in models:
-                    model_data = aggregated_df[aggregated_df['model_name'] == model]
-                    plt.plot(model_data['lead_time_months'], model_data[metric_col], marker='o', linestyle='-', label=model)
-                
-                plt.xlabel("Lead Time (Months)")
-                plt.ylabel(pretty_name)
-                plt.title(f"{pretty_name} vs. Lead Time by Model")
-                plt.legend()
-                plt.grid(True)
-                plt.xticks(aggregated_df['lead_time_months'].unique()) # Ensure all lead times are marked
-
-                plot_filename = self.output_folder / f"plot_{metric_col}_vs_lead_time.png"
-                plt.savefig(plot_filename)
-                plt.close() # Close the figure to free memory
-                self.logger.info(f"Saved plot: {plot_filename}")
-
-        except ImportError:
-            self.logger.error("Matplotlib is not installed. Skipping metrics plots. Please install it (e.g., pip install matplotlib).")
-        except Exception as e:
-            self.logger.error(f"Failed to generate metrics plots: {e}", exc_info=True)
-
-    def _plot_validation_areas(self):
-        """Generates and saves a plot of the validation areas from the shapefile."""
-        if self.watershed_gdf is None or self.watershed_gdf.empty:
-            self.logger.warning("Watershed GeoDataFrame is not loaded. Skipping validation areas plot.")
-            return
-        
-        try:
-            import matplotlib.pyplot as plt
-            fig, ax = plt.subplots(1, 1, figsize=(10, 8))
-            self.watershed_gdf.plot(ax=ax, facecolor='lightblue', edgecolor='black', alpha=0.7)
-            
-            # Add labels for area IDs if the column exists and is not too crowded
-            area_id_col = self.config.get("shapefile_config", {}).get("area_id_column", "AREA_ID")
-            if area_id_col in self.watershed_gdf.columns and len(self.watershed_gdf) < 20: # Avoid clutter for many polygons
-                self.watershed_gdf.apply(lambda x: ax.annotate(text=x[area_id_col], xy=x.geometry.centroid.coords[0], ha='center'), axis=1)
-            
-            plt.title("Validation Areas")
-            plt.xlabel("Longitude")
-            plt.ylabel("Latitude")
-            plt.grid(True)
-            
-            plot_filename = self.output_folder / "plot_validation_areas.png"
-            plt.savefig(plot_filename)
-            plt.close() # Close the figure to free memory
-            self.logger.info(f"Saved plot: {plot_filename}")
-
-        except ImportError:
-            self.logger.error("Matplotlib or GeoPandas might not be installed correctly. Skipping validation areas plot.")
-        except Exception as e:
-            self.logger.error(f"Failed to generate validation areas plot: {e}", exc_info=True)
 
 if __name__ == '__main__':
     print(f"Class {DemoValidationProcessor.__name__} defined. Run via a dedicated runner script.") 
