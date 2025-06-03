@@ -1,0 +1,53 @@
+{
+  "base_path": ".",
+  "output_config": {
+    "folder": "output",
+    "main_results_filename": "demo_rainfall_validation_results.csv",
+    "detailed_means_filename": "demo_rainfall_means_and_metrics.csv",
+    "validation_matrix_excel": "demo_validation_matrix.xlsx",
+    "skipped_log_filename": "demo_skipped_combinations.log"
+  },
+  "observed_data_config": {
+    "folder": "data/observed_rainfall",
+    "filename_pattern": "observed_rain_{year}{month}.tif",
+    "file_type": "tif"
+  },
+  "geospatial_config": {
+    "shapefile_path": "data/shapefiles_demo/sample_boundary.shp",
+    "area_id_column": "AREA_ID",
+    "area_name_column": "AREA_NAME"
+  },
+  "forecast_models_config": {
+    "model_A": {
+      "data_folder_template": "data/forecast_generic_model_A/{year}_{month}",
+      "filename_pattern_options": ["model_A_fcst_{target_ym}.tif"]
+    },
+    "model_B": {
+      "data_folder_template": "data/forecast_generic_model_B/{year}_{month}",
+      "filename_pattern_options": ["model_B_fcst_{target_ym}.tif"]
+    }
+  },
+  "raster_processing_config": {
+    "default_crs": "EPSG:32647",
+    "nodata_value": -999.0,
+    "resampling_method": "bilinear"
+  },
+  "analysis_iterations_config": {
+    "years_to_process": ["2022"],
+    "months_to_process": ["01", "02"],
+    "lead_time_offsets_months": [0, 1, 2, 3]
+  },
+  "logging_config": {
+    "log_file_name": "demo_processing_log.txt",
+    "log_level": "INFO"
+  },
+  "accuracy_metric_config": {
+    "rainfall_categories_mm_month": {
+        "no_rain": 1.0,
+        "light_rain": 25.0,
+        "moderate_rain": 75.0,
+        "heavy_rain": 150.0
+    },
+    "binary_thresholds_mm_month": [10, 50, 100]
+  }
+} 

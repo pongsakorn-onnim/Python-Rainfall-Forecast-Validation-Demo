@@ -1,0 +1,70 @@
+2025-06-02 23:17:40,519 - DemoValidationProcessor - INFO - Successfully loaded configuration from: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\config_demo.json
+2025-06-02 23:17:40,519 - DemoValidationProcessor - INFO - Project root set to: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo
+2025-06-02 23:17:40,519 - DemoValidationProcessor - INFO - Base path for data/output set to: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo
+2025-06-02 23:17:40,519 - DemoValidationProcessor - INFO - Loading shapefile: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\shapefiles_demo\sample_boundary.shp
+2025-06-02 23:17:40,677 - DemoValidationProcessor - INFO - Shapefile loaded successfully. Area IDs: [np.int64(1), np.int64(2), np.int64(3)]
+2025-06-02 23:17:40,677 - DemoValidationProcessor - INFO - Starting validation process...
+2025-06-02 23:17:40,677 - DemoValidationProcessor - INFO - Processing model: model_A
+2025-06-02 23:17:40,677 - DemoValidationProcessor - INFO - Processing: Model=model_A, Init=2022-01, Lead=0m, Target=2022-01
+2025-06-02 23:17:40,677 - DemoValidationProcessor - INFO -   Forecast file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\forecast_generic_model_A\2022_01\model_A_fcst_202201.tif
+2025-06-02 23:17:40,677 - DemoValidationProcessor - INFO -   Observed file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\observed_rainfall\observed_rain_202201.tif
+2025-06-02 23:17:40,804 - DemoValidationProcessor - INFO - Processing: Model=model_A, Init=2022-01, Lead=1m, Target=2022-02
+2025-06-02 23:17:40,804 - DemoValidationProcessor - INFO -   Forecast file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\forecast_generic_model_A\2022_01\model_A_fcst_202202.tif
+2025-06-02 23:17:40,804 - DemoValidationProcessor - INFO -   Observed file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\observed_rainfall\observed_rain_202202.tif
+2025-06-02 23:17:40,821 - DemoValidationProcessor - INFO - Processing: Model=model_A, Init=2022-01, Lead=2m, Target=2022-03
+2025-06-02 23:17:40,821 - DemoValidationProcessor - INFO -   Forecast file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\forecast_generic_model_A\2022_01\model_A_fcst_202203.tif
+2025-06-02 23:17:40,821 - DemoValidationProcessor - INFO -   Observed file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\observed_rainfall\observed_rain_202203.tif
+2025-06-02 23:17:40,842 - DemoValidationProcessor - INFO - Processing: Model=model_A, Init=2022-01, Lead=3m, Target=2022-04
+2025-06-02 23:17:40,843 - DemoValidationProcessor - INFO -   Forecast file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\forecast_generic_model_A\2022_01\model_A_fcst_202204.tif
+2025-06-02 23:17:40,844 - DemoValidationProcessor - INFO -   Observed file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\observed_rainfall\observed_rain_202204.tif
+2025-06-02 23:17:40,848 - DemoValidationProcessor - INFO - Processing: Model=model_A, Init=2022-02, Lead=0m, Target=2022-02
+2025-06-02 23:17:40,863 - DemoValidationProcessor - INFO -   Forecast file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\forecast_generic_model_A\2022_02\model_A_fcst_202202.tif
+2025-06-02 23:17:40,863 - DemoValidationProcessor - INFO -   Observed file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\observed_rainfall\observed_rain_202202.tif
+2025-06-02 23:17:40,884 - DemoValidationProcessor - INFO - Processing: Model=model_A, Init=2022-02, Lead=1m, Target=2022-03
+2025-06-02 23:17:40,884 - DemoValidationProcessor - INFO -   Forecast file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\forecast_generic_model_A\2022_02\model_A_fcst_202203.tif
+2025-06-02 23:17:40,885 - DemoValidationProcessor - INFO -   Observed file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\observed_rainfall\observed_rain_202203.tif
+2025-06-02 23:17:40,900 - DemoValidationProcessor - INFO - Processing: Model=model_A, Init=2022-02, Lead=2m, Target=2022-04
+2025-06-02 23:17:40,900 - DemoValidationProcessor - INFO -   Forecast file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\forecast_generic_model_A\2022_02\model_A_fcst_202204.tif
+2025-06-02 23:17:40,900 - DemoValidationProcessor - INFO -   Observed file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\observed_rainfall\observed_rain_202204.tif
+2025-06-02 23:17:40,928 - DemoValidationProcessor - INFO - Processing: Model=model_A, Init=2022-02, Lead=3m, Target=2022-05
+2025-06-02 23:17:40,929 - DemoValidationProcessor - INFO -   Forecast file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\forecast_generic_model_A\2022_02\model_A_fcst_202205.tif
+2025-06-02 23:17:40,929 - DemoValidationProcessor - INFO -   Observed file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\observed_rainfall\observed_rain_202205.tif
+2025-06-02 23:17:40,949 - DemoValidationProcessor - INFO - Processing model: model_B
+2025-06-02 23:17:40,951 - DemoValidationProcessor - INFO - Processing: Model=model_B, Init=2022-01, Lead=0m, Target=2022-01
+2025-06-02 23:17:40,954 - DemoValidationProcessor - INFO -   Forecast file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\forecast_generic_model_B\2022_01\model_B_fcst_202201.tif
+2025-06-02 23:17:40,954 - DemoValidationProcessor - INFO -   Observed file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\observed_rainfall\observed_rain_202201.tif
+2025-06-02 23:17:40,974 - DemoValidationProcessor - INFO - Processing: Model=model_B, Init=2022-01, Lead=1m, Target=2022-02
+2025-06-02 23:17:40,975 - DemoValidationProcessor - INFO -   Forecast file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\forecast_generic_model_B\2022_01\model_B_fcst_202202.tif
+2025-06-02 23:17:40,975 - DemoValidationProcessor - INFO -   Observed file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\observed_rainfall\observed_rain_202202.tif
+2025-06-02 23:17:40,995 - DemoValidationProcessor - INFO - Processing: Model=model_B, Init=2022-01, Lead=2m, Target=2022-03
+2025-06-02 23:17:40,996 - DemoValidationProcessor - INFO -   Forecast file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\forecast_generic_model_B\2022_01\model_B_fcst_202203.tif
+2025-06-02 23:17:40,996 - DemoValidationProcessor - INFO -   Observed file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\observed_rainfall\observed_rain_202203.tif
+2025-06-02 23:17:41,018 - DemoValidationProcessor - INFO - Processing: Model=model_B, Init=2022-01, Lead=3m, Target=2022-04
+2025-06-02 23:17:41,019 - DemoValidationProcessor - INFO -   Forecast file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\forecast_generic_model_B\2022_01\model_B_fcst_202204.tif
+2025-06-02 23:17:41,019 - DemoValidationProcessor - INFO -   Observed file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\observed_rainfall\observed_rain_202204.tif
+2025-06-02 23:17:41,041 - DemoValidationProcessor - INFO - Processing: Model=model_B, Init=2022-02, Lead=0m, Target=2022-02
+2025-06-02 23:17:41,041 - DemoValidationProcessor - INFO -   Forecast file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\forecast_generic_model_B\2022_02\model_B_fcst_202202.tif
+2025-06-02 23:17:41,041 - DemoValidationProcessor - INFO -   Observed file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\observed_rainfall\observed_rain_202202.tif
+2025-06-02 23:17:41,047 - DemoValidationProcessor - INFO - Processing: Model=model_B, Init=2022-02, Lead=1m, Target=2022-03
+2025-06-02 23:17:41,063 - DemoValidationProcessor - INFO -   Forecast file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\forecast_generic_model_B\2022_02\model_B_fcst_202203.tif
+2025-06-02 23:17:41,064 - DemoValidationProcessor - INFO -   Observed file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\observed_rainfall\observed_rain_202203.tif
+2025-06-02 23:17:41,082 - DemoValidationProcessor - INFO - Processing: Model=model_B, Init=2022-02, Lead=2m, Target=2022-04
+2025-06-02 23:17:41,083 - DemoValidationProcessor - INFO -   Forecast file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\forecast_generic_model_B\2022_02\model_B_fcst_202204.tif
+2025-06-02 23:17:41,084 - DemoValidationProcessor - INFO -   Observed file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\observed_rainfall\observed_rain_202204.tif
+2025-06-02 23:17:41,102 - DemoValidationProcessor - INFO - Processing: Model=model_B, Init=2022-02, Lead=3m, Target=2022-05
+2025-06-02 23:17:41,102 - DemoValidationProcessor - INFO -   Forecast file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\forecast_generic_model_B\2022_02\model_B_fcst_202205.tif
+2025-06-02 23:17:41,102 - DemoValidationProcessor - INFO -   Observed file: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\data\observed_rainfall\observed_rain_202205.tif
+2025-06-02 23:17:41,132 - DemoValidationProcessor - INFO - Main validation results saved to: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\output\demo_rainfall_validation_results.csv
+2025-06-02 23:17:41,133 - DemoValidationProcessor - INFO - No skipped combinations to log.
+2025-06-02 23:17:41,153 - DemoValidationProcessor - INFO - Aggregated metrics (RMSE, Bias, Pearson R) saved to: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\output\demo_rainfall_means_and_metrics.csv
+2025-06-02 23:17:41,153 - DemoValidationProcessor - INFO - Creating Excel validation matrix: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\output\demo_validation_matrix.xlsx
+2025-06-02 23:17:41,220 - DemoValidationProcessor - INFO - 'Validation Metrics' sheet written to D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\output\demo_validation_matrix.xlsx
+2025-06-02 23:17:41,240 - DemoValidationProcessor - INFO - Excel validation matrix saved successfully: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\output\demo_validation_matrix.xlsx
+2025-06-02 23:17:41,240 - DemoValidationProcessor - INFO - Creating Excel validation matrix: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\output\demo_validation_matrix.xlsx
+2025-06-02 23:17:41,253 - DemoValidationProcessor - INFO - 'Validation Metrics' sheet written to D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\output\demo_validation_matrix.xlsx
+2025-06-02 23:17:41,273 - DemoValidationProcessor - INFO - Excel validation matrix saved successfully: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\output\demo_validation_matrix.xlsx
+2025-06-02 23:17:44,171 - DemoValidationProcessor - INFO - Saved plot: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\output\plot_rmse_vs_lead_time.png
+2025-06-02 23:17:44,295 - DemoValidationProcessor - INFO - Saved plot: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\output\plot_mean_error_bias_vs_lead_time.png
+2025-06-02 23:17:44,404 - DemoValidationProcessor - INFO - Saved plot: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\output\plot_pearson_r_vs_lead_time.png
+2025-06-02 23:17:44,527 - DemoValidationProcessor - INFO - Saved plot: D:\HII\Watershed38\Project\RainfallForecastValidation_Demo\output\plot_validation_areas.png
+2025-06-02 23:17:44,527 - DemoValidationProcessor - INFO - Validation process finished.

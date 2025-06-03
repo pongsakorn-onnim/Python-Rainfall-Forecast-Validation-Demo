@@ -1,0 +1,8 @@
+pandas
+numpy
+geopandas
+rasterio
+rasterstats
+shapely
+xlsxwriter
+matplotlib 
