@@ -70,7 +70,6 @@ RainfallForecastValidation_Demo/
     ```bash
     pip install -r requirements.txt
     ```
-    *(Note: The `requirements.txt` file will need to be created. See "Next Steps" below.)*
 
 ## How to Run
 
@@ -103,11 +102,11 @@ The `config_demo.json` file controls various aspects of the validation process:
 
 *   `base_path`: (Usually ".") Specifies the root directory for resolving relative paths within the config (e.g., data and output folders).
 *   `shapefile_config`: Defines the path to the boundary shapefile and attribute columns for area ID and name.
-*   `default_crs`: The default Coordinate Reference System (e.g., "EPSG:4326") to use if reprojection is needed.
+*   `default_crs`: The default Coordinate Reference System (e.g., "EPSG:32647" as used in the demo) to use if reprojection is needed.
 *   `raster_processing_config`: Contains settings like `nodata_value` and `resampling_method`.
-*   `iteration_parameters`: Specifies the years, initialization months, and lead times to process.
-*   `models_config`: An array defining each forecast model, including its name, path to forecast data, and filename patterns.
-*   `observed_config`: Defines the path to observed data and its filename pattern.
+*   `analysis_iterations_config`: Specifies the years, initialization months, and lead times to process.
+*   `forecast_models_config`: Defines each forecast model, including its name, path to forecast data, and filename patterns.
+*   `observed_data_config`: Defines the path to observed data and its filename pattern.
 *   `output_config`: Specifies the output folder and names for the generated CSV and Excel files.
 *   `logging_config`: Configures the log file name and logging level.
 

@@ -5,4 +5,5 @@ rasterio
 rasterstats
 shapely
 xlsxwriter
-matplotlib 
+matplotlib
+python-dateutil 

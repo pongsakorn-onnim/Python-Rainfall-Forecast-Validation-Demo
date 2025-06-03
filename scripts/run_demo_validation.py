@@ -26,8 +26,8 @@ def main():
     parser.add_argument(
         "--init_months",
         nargs='+',
-        type=int,
-        help="Optional: List of specific initialization months (1-12) to process. Processes all specified in config if not specified."
+        type=str,
+        help="Optional: List of specific initialization months (e.g., '01' '02' '11') to process. Processes all specified in config if not specified."
     )
     
     args = parser.parse_args()
